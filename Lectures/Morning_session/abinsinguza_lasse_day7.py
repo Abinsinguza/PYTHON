@@ -169,7 +169,7 @@ import csv
 
 #writing to a csv file
 with open ('lasse.csv', 'w', newline='') as csv_file:
-    writer= csv.writer
+    writer= csv.writer(csv_file)
     writer.writerow(['name','position','course'])
     writer.writerow(['lasse','student','BSE'])
     writer.writerow(['jeff Geoff','Lecture','BSE'])
@@ -206,7 +206,7 @@ with open('student_data.json','w') as json_file:
     json.dump(student_data, json_file)
     
 #Reading the JSON file
-with open('studend_data.json','r') as json_file:
+with open('student_data.json','r') as json_file:
     student_data = json.load(json_file)
     print(student_data)
 
